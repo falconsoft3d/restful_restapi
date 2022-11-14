@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "fe5c2cf6-7880-440f-9af5-dbdefddab330",
+		"name": "restfull",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14603894"
+	},
+	"item": [
+		{
+			"name": "GET - Token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "username",
+						"value": "admin1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "x12345678901",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "db",
+						"value": "db14ce-spain1",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"admin\",\n    \"password\" : \"x1234567890\",\n    \"db\" : \"db14ce-spain\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8069/api/auth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"api",
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Products",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Products",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "access_token_920b867d137e65e1c7cccceea8069b65c7fb7a8b",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Producto Demo\",\n    \"list_price\" : 4000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8069/api/product.template",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"api",
+						"product.template"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
